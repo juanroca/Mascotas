@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    >
+    <LinearLayout
+        android:id="@+id/ll_imagen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imgMascota"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerInside"
+                android:layout_gravity="center"
+                />
+
+        <RelativeLayout
+            android:id="@+id/ll_datos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_imagen">
+
+            <ImageButton
+                android:id="@+id/ibHueso"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_hueso"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="209dp" />
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_toEndOf="@+id/ibHueso"
+                />
+
+            <ImageView
+                android:id="@+id/ivHueso"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_hueso"
+                tools:layout_editor_absoluteX="335dp"
+                tools:layout_editor_absoluteY="209dp" />
+
+            <TextView
+                android:id="@+id/tvLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="19dp"
+                android:layout_toStartOf="@+id/ivHueso"
+                android:textColor="@color/purple_700"
+
+                tools:layout_editor_absoluteX="304dp"
+                tools:layout_editor_absoluteY="209dp" />
+
+            <RatingBar
+                android:id="@+id/rbMascota"
+                style="@style/estiloCalificacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvNombre"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/ibHueso"
+                android:stepSize="0.1"
+                tools:layout_editor_absoluteX="83dp"
+                tools:layout_editor_absoluteY="252dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

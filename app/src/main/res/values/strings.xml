@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RecyclerView</string>
+    <string name="nombre_Mascota">NombreMascota</string>
+    <string name="likes_Mascotas">1</string>
+</resources>
